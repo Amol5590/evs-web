@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Plastic Waste</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 40%;
+    border: 3px solid white;
+    border-radius: 50px;
+}
+.navbar{
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    
+}
+
+.nav-list{
+    width: 70%;
+    
+    display: flex;
+
+    align-items: center;
+}
+
+.nav-list li{
+    list-style: none;
+    padding: 26px 30px;
+    font-size: 20px;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list li a:hover{
+    text-decoration: none;
+    color: red;
+
+}
+
+.rightNav{
+    
+    width: 30%;
+    text-align: right;
+    padding: 0 23px;
+}
+
+#search{
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid gray;
+    border-radius: 9px;
+}
+
+.background{
+    background: rgba(0, 0, 0, 0.7) url('https://images.unsplash.com/photo-1610093703375-6d8fd641294b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.firstSection{
+    height: 100vh;
+}
+
+.firstHalf{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondHalf{
+    width: 30%;
+}
+.secondHalf img{
+    width: 90%;
+    
+    border: 4px solid white;
+    border-radius: 150px;
+    display: block;
+    margin: auto;
+}
+
+
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin: auto;
+    height: 80%;
+}
+
+.text-big{
+    font-size: 40px;
+}
+.text-small{
+    font-size: 18;
+}
+.btn{
+    padding: 8px 20px;
+    margin: 7px 3px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: none;
+    color: white;
+    cursor: pointer;
+
+}
+.btn-sm{
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+.btn-dark{
+    color: black;
+    border: 2px solid black;
+}
+
+.contact{
+    background-color: azure;
+    height: 533px;
+}
+.text-center{
+    text-align: center;
+    padding: 30px;
+}
+.sectionSubTag{
+    background: rgba(240, 238, 238, 0.7) url("https://images.unsplash.com/photo-1615715757401-f30e7b27b912?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+.form{
+    max-width: 500px;
+    margin: 42px auto;
+}
+.form input{
+    margin: 15px 0;
+    width: 100%;
+    font-size: 19px;
+    border: 2px solid grey;
+    border-radius: 6px;
+    padding: 5px 3px;
+}
+.text-footer{
+    text-align: center;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.burger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 15px;
+    
+
+}
+.line{
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 5px 5px;
+}
+
+
+@media only screen and (max-width: 1140px){
+    .nav-list{
+        flex-direction: column;
+    }
+    .navbar{
+        height: 478px;
+        flex-direction: column;
+        transition: all 0.3s ease-out;
+    }
+    .rightNav{
+        text-align: center;
+    }
+    .box-main{
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+    #search{
+        width: 100%;
+    }
+    .burger{
+        display: block;
+    }
+    .h-nav-resp{
+        height: 72px;
+    }
+    .v-class-resp{
+        opacity: 0;
+    }
+    .text-big{
+        text-align: center;
+
+    }
+    .text-small{
+        text-align: center;
+    }
+    .buttons{
+        text-align: center;
+    }
+    
+}
+
+
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar background h-nav-resp ">
+        <ul class="nav-list v-class-resp">
+            <div class="logo"><img src="https://images.unsplash.com/photo-1562577308-7a567b20e123?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="logo"></div>
+            <li> <a href="#home"> Home</a> </li>
+            <li> <a href="#about"> About</a> </li>
+            
+            <li> <a href="#study"> study</a> </li>
+            <li> <a href="#reg"> Register With Us</a> </li>
+        </ul>
+        <div class="rightNav v-class-resp">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sn">search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <section class="background firstSection" id="about">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">What is Plastic Waste</p>
+                <p class="text-small">Plastic waste is the accumulation of plastic objects and particles(e.g. plastic bottles, bags and miceobeads)
+                    in Earth's environment that adversely affects the humans, wildlife and their habitat. 
+                </p>
+                <div class="buttons">
+                    <button class="btn">subscribe</button>
+                    <button class="btn">watch video</button>
+                </div>
+            </div>
+
+            <div class="secondHalf">
+            <img src="https://images.unsplash.com/photo-1562577308-7a567b20e123?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="waste image">
+
+            </div>
+        </div>
+
+    </section>
+
+    
+    
+
+    <section class="secRight" id="study">
+        <div class="paras">
+        <P class="sectionTag text-big"> Detail Study on Plastic Waste</P>
+        <p class="sectionSubTag text-small"> 
+            Plastic waste has become a formidable adversary in the ongoing battle for environmental sustainability, casting a long and persistent shadow across the globe. The proliferation of plastics, particularly single-use items, has given rise to a crisis that transcends borders, affecting ecosystems, wildlife, and human health. As we grapple with the consequences of our reliance on plastics, it becomes imperative to delve into the origins, impacts, and potential solutions surrounding this ubiquitous material.
+
+The genesis of the plastic predicament can be traced back to the mid-20th century when the mass production of plastics revolutionized industries and consumer habits. Initially celebrated for its versatility, durability, and cost-effectiveness, plastic soon found its way into almost every facet of modern life. From packaging materials to medical devices, from consumer goods to automotive components, the prevalence of plastic was, and continues to be, unparalleled.
+
+The issue gained prominence as the dark side of this convenience became apparent. The durability that made plastic so appealing also meant that it persisted in the environment long after its intended use. Unlike organic materials, plastic takes centuries to decompose, accumulating in landfills, water bodies, and even remote areas far from human civilization. The sheer volume of plastic waste generated annually is staggering, with millions of tons entering the oceans, posing an imminent threat to marine life and ecosystems.
+
+One of the most visible manifestations of the plastic crisis is the proliferation of single-use plastics. Items like plastic bags, straws, bottles, and packaging have become emblematic of a throwaway culture that prioritizes convenience over environmental stewardship. These items, designed for short-term use, often find their way into the environment after a single use, exacerbating the problem of plastic pollution.
+
+The impact of plastic waste on wildlife is particularly distressing. Oceans, in particular, have become dumping grounds for vast quantities of plastic, leading to devastating consequences for marine life. Sea turtles mistake plastic bags for jellyfish, a staple in their diet, and ingest them, often with fatal results. Birds, too, fall victim to plastic ingestion, with their stomachs filled with indigestible plastic particles. The intricate web of marine ecosystems is disrupted as plastics entangle coral reefs and disrupt the balance of underwater habitats.
+
+Beyond its visible impact on wildlife, plastic waste poses a more insidious threat through the generation of microplastics. These are tiny plastic particles, often less than 5 millimeters in size, that result from the breakdown of larger plastic items or are intentionally manufactured for use in various products. Microplastics infiltrate water bodies, soil, and even the air, with studies indicating their presence in remote areas like the Arctic. The consequences of this pervasive infiltration are only beginning to be understood, with potential implications for human health as microplastics find their way into the food chain.
+
+The human connection to the plastic crisis is both direct and indirect. On a direct level, communities living in proximity to landfills or areas with high plastic pollution face immediate health risks. The burning of plastic waste releases toxic fumes, contributing to air pollution and respiratory ailments. Moreover, the leaching of chemicals from plastic into the soil can contaminate water sources, jeopardizing the health of those dependent on these resources.
+
+Indirectly, the impact on human health stems from the ingestion of microplastics through the food chain. Fish, for example, can ingest microplastics, which then accumulate in their tissues. When humans consume these contaminated fish, they unwittingly introduce microplastics into their bodies. The potential health risks associated with this phenomenon, including endocrine disruption and inflammatory responses, are areas of active research and concern.
+
+Efforts to address the plastic crisis span a spectrum of strategies, from grassroots initiatives to global policy changes. At the individual level, awareness campaigns and educational programs aim to change consumer behavior and reduce the demand for single-use plastics. This involves encouraging the use of reusable alternatives, such as cloth bags, stainless steel water bottles, and glass containers. Governments and municipalities have also stepped in, implementing plastic bag bans, bottle deposit programs, and other regulations aimed at curbing the production and consumption of single-use plastics.
+
+In the corporate sphere, businesses are increasingly recognizing the importance of sustainability in their operations. Many companies are reevaluating their packaging practices, opting for eco-friendly materials and minimizing excess packaging. Innovations in packaging design, such as edible packaging and biodegradable materials, are gaining traction as alternatives to traditional plastic packaging.
+
+On a broader scale, international collaborations and agreements are being forged to tackle the transboundary nature of the plastic crisis. The United Nations has recognized the severity of the issue, with the Sustainable Development Goals (SDGs) including targets related to reducing marine pollution, including plastic waste. The UN Environment Programme (UNEP) has launched initiatives to address plastic pollution, and regional agreements, such as the European Union's Single-Use Plastics Directive, are setting the stage for coordinated efforts to combat the plastic epidemic.
+
+Technological advancements also play a crucial role in the quest for sustainable solutions. Recycling technologies have evolved to handle a wider range of plastics, and innovations in chemical recycling hold promise for transforming plastics into valuable raw materials. The development of bioplastics, derived from renewable resources, offers an alternative to traditional petroleum-based plastics. However, challenges remain, including the cost-effectiveness of these technologies and the need for widespread infrastructure to support recycling initiatives.
+
+While progress is being made, significant obstacles hinder the comprehensive resolution of the plastic waste crisis. Economic factors, such as the low cost of virgin plastic production compared to recycling, create disincentives for businesses to invest in sustainable practices. Inadequate waste management infrastructure in many regions further exacerbates the problem, as plastic waste is often mismanaged and ends up polluting the environment.
+
+Furthermore, the sheer scale of the plastic issue necessitates a paradigm shift in societal attitudes towards consumption and waste. A circular economy, where products are designed with their end-of-life in mind and materials are continually recycled, is proposed as a holistic solution. This approach challenges the traditional linear model of "take, make, dispose" and emphasizes the importance of reducing, reusing, and recycling materials to minimize environmental impact.
+
+Education and awareness are central to fostering this shift in mindset. Initiatives that promote environmental literacy, from school curricula to public awareness campaigns, are crucial in cultivating a sense of responsibility and stewardship towards the planet. By understanding the lifecycle of products and the environmental consequences of their choices, individuals can make informed decisions that contribute to a more sustainable future.
+
+In conclusion, the plastic waste crisis stands as a multifaceted challenge that requires concerted efforts at individual, community, corporate, and governmental levels. The detrimental impact on ecosystems, wildlife, and human health necessitates urgent and comprehensive action. While strides have been made in raising awareness, implementing regulations, and developing innovative technologies, the road ahead is long and challenging. A collective commitment to reducing plastic consumption, promoting sustainable practices, and investing in a circular economy is essential to overcome this global predicament and ensure a healthier planet for future generations.
+
+
+
+
+
+
+        </p>
+        </div>
+        <div class="thumbnail">   
+            <img src="" alt="" class="imgFluid">
+        </div>
+    </section>
+
+    <section class="reg" id="reg">
+        <h2 class="text-center">Register With Us</h2>
+        <div class="form">
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <input type="text" name="phone" id="phone" placeholder="Enter your phone">
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+            <button class="btn btn-dark">submit</button>
+        </div>
+    </section>
+    <footer class="background">
+    
+        <p class="text-footer">
+        copyright &copy 2023 -www.plastic waste.com - All rights reserved</p>
+    </footer>
+    
+    <script src="js/resp.js"></script>
+    <script>
+        burger = document.querySelector('.burger')
+        navbar = document.querySelector('.navbar')
+        navList = document.querySelector('.navList')
+        rightNav = document.querySelector('.rightNav')
+
+
+
+        burger.addEventListener('click', ()=>{
+            rightNav.classList.toggle('v-class-resp');
+            navList.classList.toggle('v-class-resp');
+            navbar.classList.toggle('h-nav-resp');
+
+
+})
+    </script>
+</body>
+</html>
